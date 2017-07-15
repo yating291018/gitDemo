@@ -6,4 +6,11 @@ louss分之上提交这是在hu分支上的东西
 2222222222222222222
 这是在HU上的代码
 这是在HU2上提交的代码
-
+function quchong(array){
+    let newArray = [];
+    array.forEach((item,index) =>{
+	if(newArray.indexOf(item)==-1){
+		newArray.push(item);
+	}
+    })
+}
