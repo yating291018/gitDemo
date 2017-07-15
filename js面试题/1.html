@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* var a = 1;
+         function test(){
+             console.log(a);
+             try{
+                a(2);
+                A(3);
+             }catch(e){
+                a = 2;
+             }
+             function a(b){
+                 a = b;
+             }
+             console.log(++a);
+         }
+         test();
+         console.log(a);*/
+         var pArray = [];
+         for(var i = 0;i<5;i++){
+            (function(i){
+                pArray.push(new Promise((resolve,reject)=>{
+                            setTimeout(()=>{
+                                console.log(i);
+                                resolve();
+                            },1000)
+                }))
+            })(i);
+         }
+         Promise.all(pArray).then(()=>{
+                console.log()
+         })
+        //  打印什么？如何让其打印0,1,2,3,4?如何让其打印0,隔一秒打印1,直到4？(使用Promise解决)
+
+    </script>
+</body>
+</html>

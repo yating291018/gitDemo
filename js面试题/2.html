@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app"></div>
+    <script>
+        var appDom = document.querySelector(".app");
+        var html = "";
+        for(var i=0;i<5;i++){
+            html +="<div class='test'>"+i+"</div>";
+        }
+        appDom.innerHTML=html;
+        var divDoms = document.querySelectorAll(".test");
+        for(var i=0 ;i<divDoms.length;i++){     
+                divDoms[i].onclick=function(){
+                    alert(this.innerHTML);
+                }
+        }
+        
+    </script>
+</body>
+</html>
